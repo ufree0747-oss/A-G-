@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aʟᴘʜᴀ ꭙ Gᴀᴍᴇʀ - Digital Creator & Innovator</title>
+    <meta name="description" content="A modern personal website showcasing projects, insights, and digital journey">
+    
+    <!-- External Libraries -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen hidden" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <div class="logo-pulse"></div>
+                <span class="loading-text">A ꭙ G</span>
+            </div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar" data-visible="false" data-scrolled="false">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <div class="logo-glow">A ꭙ G</div>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="#hero" class="nav-link" data-section="hero">
+                    <span class="nav-text">Home</span>
+                    <span class="nav-glow"></span>
+                </a>
+                <a href="#about" class="nav-link" data-section="about">
+                    <span class="nav-text">About</span>
+                    <span class="nav-glow"></span>
+                </a>
+                <a href="#projects" class="nav-link" data-section="projects">
+                    <span class="nav-text">Projects</span>
+                    <span class="nav-glow"></span>
+                </a>
+                <a href="#dashboard" class="nav-link" data-section="dashboard">
+                    <span class="nav-text">Dashboard</span>
+                    <span class="nav-glow"></span>
+                </a>
+                <a href="#blog" class="nav-link" data-section="blog">
+                    <span class="nav-text">Blog</span>
+                    <span class="nav-glow"></span>
+                </a>
+                <a href="#contact" class="nav-link" data-section="contact">
+                    <span class="nav-text">Contact</span>
+                    <span class="nav-glow"></span>
+                </a>
+            </div>
+            
+            <div class="nav-controls">
+                <button class="theme-toggle" id="themeToggle">
+                         <i class="fas fa-moon"></i>
+                         <i class="fas fa-sun"></i>
+                     </button>
+                <div class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-background">
+                <div class="gradient-orbs" data-speed="0.5">
+                    <div class="orb orb-1"></div>
+                    <div class="orb orb-2"></div>
+                    <div class="orb orb-3"></div>
+                </div>
+                <div class="particles-container" id="particlesContainer" data-particles="150"></div>
+            </div>
+            
+            <div class="hero-content">
+                <div class="hero-text" data-animate="left">
+                    <h1 class="hero-title">
+                        <span class="title-main" data-text="Aʟᴘʜᴀ ꭙ Gᴀᴍᴇʀ">Aʟᴘʜᴀ ꭙ Gᴀᴍᴇʀ</span>
+                        <span class="title-sub" data-text="Digital Creator">Digital Creator</span>
+                    </h1>
+                    <p class="hero-description">
+                        Crafting digital experiences that blend technology, creativity, and human connection. 
+                        Building the future, one project at a time.
+                    </p>
+                    <div class="hero-actions">
+                        <button class="btn btn-primary" id="exploreBtn" data-ripple="true">
+                            <span>Explore My Work</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <button class="btn btn-secondary" id="contactBtn" data-ripple="true">
+                            <span>Get In Touch</span>
+                            <i class="fas fa-message"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-visual" data-animate="right">
+                    <div class="hero-card" data-tilt="true" data-tilt-max="15">
+                        <div class="card-glow"></div>
+                        <div class="card-content">
+                            <div class="card-header">
+                                <div class="card-avatar"></div>
+                                <div class="card-info">
+                                    <h3>Aʟᴘʜᴀ ꭙ Gᴀᴍᴇʀ</h3>
+                                    <p>Full-Stack Developer</p>
+                                </div>
+                            </div>
+                            <div class="card-stats">
+                                <div class="stat">
+                                    <span class="stat-number">15+</span>
+                                    <span class="stat-label">Projects</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">3+</span>
+                                    <span class="stat-label">Years</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">50+</span>
+                                    <span class="stat-label">Clients</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scroll-indicator" data-scroll="true">
+                <div class="scroll-arrow"></div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="section-header" data-animate>
+                    <h2 class="section-title">About Me</h2>
+                    <p class="section-subtitle">The story behind the code</p>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-card" data-animate="left">
+                        <div class="card-glass">
+                            <div class="about-header">
+                                <div class="about-avatar">
+                                    <div class="avatar-glow"></div>
+                                </div>
+                                <div class="about-intro">
+                                    <h3>Aʟᴘʜᴀ ꭙ Gᴀᴍᴇʀ</h3>
+                                    <p>Digital Creator & Technology Enthusiast</p>
+                                </div>
+                            </div>
+                            <div class="about-bio">
+                                <p>I'm a passionate developer who believes in the power of technology to transform lives. With a background in computer science and a heart for innovation, I create digital solutions that bridge the gap between human needs and technological possibilities.</p>
+                                <p>My journey started with curiosity and evolved into a mission: to build products that make a difference. From web applications to mobile experiences, I approach each project as an opportunity to learn, grow, and contribute to the digital landscape.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skills-timeline" data-animate="right">
+                        <div class="timeline-item" data-year="2023">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>   Started Development Journey</h4>
+                                <p>Began learning web development and discovered my passion for creating digital experiences.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-year="2024">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>   First Professional Projects</h4>
+                                <p>Completed my first client projects and built a foundation in full-stack development.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-year="2025">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>   Advanced Skills & Specialization</h4>
+                                <p>Focused on modern frameworks, user experience, and scalable architecture design.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item active" data-year="2026">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>    Innovation & Growth</h4>
+                                <p>Currently exploring AI/ML integration and building the next generation of web applications.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Featured Projects</h2>
+                    <p class="section-subtitle">A showcase of my latest work</p>
+                </div>
+                
+                <div class="projects-grid" data-animate>
+                    <div class="project-card" data-project="1" data-animate="up">
+                        <div class="project-image">
+                            <div class="project-glow"></div>
+                            <div class="project-overlay">
+                                <div class="project-tech">
+                                    <span class="tech-tag">React</span>
+                                    <span class="tech-tag">Node.js</span>
+                                    <span class="tech-tag">MongoDB</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>TaskFlow Pro</h3>
+                            <p>A modern task management application with AI-powered productivity insights.</p>
+                            <div class="project-actions">
+                                <button class="btn btn-outline">View Details</button>
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card" data-project="2" data-animate="up">
+                        <div class="project-image">
+                            <div class="project-glow"></div>
+                            <div class="project-overlay">
+                                <div class="project-tech">
+                                    <span class="tech-tag">Vue.js</span>
+                                    <span class="tech-tag">Firebase</span>
+                                    <span class="tech-tag">Three.js</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Space Explorer</h3>
+                            <p>An interactive 3D space visualization platform for educational purposes.</p>
+                            <div class="project-actions">
+                                <button class="btn btn-outline">View Details</button>
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card" data-project="3" data-animate="up">
+                        <div class="project-image">
+                            <div class="project-glow"></div>
+                            <div class="project-overlay">
+                                <div class="project-tech">
+                                    <span class="tech-tag">Next.js</span>
+                                    <span class="tech-tag">Stripe</span>
+                                    <span class="tech-tag">PostgreSQL</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>ShopSmart AI</h3>
+                            <p>An e-commerce platform with AI-powered product recommendations.</p>
+                            <div class="project-actions">
+                                <button class="btn btn-outline">View Details</button>
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Personal Dashboard Section -->
+        <section id="dashboard" class="dashboard-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Personal Dashboard</h2>
+                    <p class="section-subtitle">Tracking progress and goals</p>
+                </div>
+                
+                <div class="dashboard-grid" data-animate>
+                    <div class="dashboard-card goals-card" data-animate="left">
+                        <div class="card-header">
+                            <h3><i class="fas fa-target"></i> Goals</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="goal-item">
+                                <div class="goal-info">
+                                    <span class="goal-title">Complete React Course</span>
+                                    <span class="goal-progress">85%</span>
+                                </div>
+                                <div class="progress-bar progress-animate">
+                                    <div class="progress-fill" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="goal-item">
+                                <div class="goal-info">
+                                    <span class="goal-title">Build 3 New Projects</span>
+                                    <span class="goal-progress">60%</span>
+                                </div>
+                                <div class="progress-bar progress-animate">
+                                    <div class="progress-fill" style="width: 60%"></div>
+                                </div>
+                            </div>
+                            <div class="goal-item">
+                                <div class="goal-info">
+                                    <span class="goal-title">Read 12 Books</span>
+                                    <span class="goal-progress">42%</span>
+                                </div>
+                                <div class="progress-bar progress-animate">
+                                    <div class="progress-fill" style="width: 42%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-card habits-card" data-animate="up">
+                        <div class="card-header">
+                            <h3><i class="fas fa-check-circle"></i> Habits</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="habit-item">
+                                <div class="habit-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <div class="habit-info">
+                                    <span class="habit-title">Code Daily</span>
+                                    <span class="habit-streak">24 day streak</span>
+                                </div>
+                                <div class="habit-status completed"></div>
+                            </div>
+                            <div class="habit-item">
+                                <div class="habit-icon">
+                                    <i class="fas fa-running"></i>
+                                </div>
+                                <div class="habit-info">
+                                    <span class="habit-title">Exercise</span>
+                                    <span class="habit-streak">107 day streak</span>
+                                </div>
+                                <div class="habit-status completed"></div>
+                            </div>
+                            <div class="habit-item">
+                                <div class="habit-icon">
+                                    <i class="fas fa-book"></i>
+                                </div>
+                                <div class="habit-info">
+                                    <span class="habit-title">Read</span>
+                                    <span class="habit-streak">13 day streak</span>
+                                </div>
+                                <div class="habit-status pending"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-card learning-card" data-animate="right">
+                        <div class="card-header">
+                            <h3><i class="fas fa-graduation-cap"></i> Learning Progress</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="learning-item">
+                                <div class="learning-subject">Machine Learning</div>
+                                <div class="learning-level">
+                                    <div class="level-dots">
+                                        <span class="dot filled"></span>
+                                        <span class="dot filled"></span>
+                                        <span class="dot filled"></span>
+                                        <span class="dot"></span>
+                                        <span class="dot"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="learning-item">
+                                <div class="learning-subject">Cloud Architecture</div>
+                                <div class="learning-level">
+                                    <div class="level-dots">
+                                        <span class="dot filled"></span>
+                                        <span class="dot filled"></span>
+                                        <span class="dot"></span>
+                                        <span class="dot"></span>
+                                        <span class="dot"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="learning-item">
+                                <div class="learning-subject">UI/UX Design</div>
+                                <div class="learning-level">
+                                    <div class="level-dots">
+                                        <span class="dot filled"></span>
+                                        <span class="dot filled"></span>
+                                        <span class="dot filled"></span>
+                                        <span class="dot filled"></span>
+                                        <span class="dot"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="blog-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Latest Insights</h2>
+                    <p class="section-subtitle">Thoughts on technology, life, and everything in between</p>
+                </div>
+                
+                <div class="blog-grid">
+                    <article class="blog-card featured" data-animate="left" data-delay="0">
+                        <div class="blog-image">
+                            <div class="blog-glow"></div>
+                            <div class="blog-category">Technology</div>
+                        </div>
+                        <div class="blog-content">
+                            <h3>The Future of AI in Web Development</h3>
+                            <p>Exploring how artificial intelligence is reshaping the way we build and interact with web applications.</p>
+                            <div class="blog-meta">
+                                <span class="blog-date">December 15, 2025</span>
+                                <span class="blog-read-time">4 hour 57 min read</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="blog-card" data-animate="up" data-delay="0.2">
+                        <div class="blog-image">
+                            <div class="blog-glow"></div>
+                            <div class="blog-category">Productivity</div>
+                        </div>
+                        <div class="blog-content">
+                            <h3>Building Better Habits with Technology</h3>
+                            <p>How I use digital tools to maintain consistency and achieve my goals.</p>
+                            <div class="blog-meta">
+                                <span class="blog-date">February 10, 2026</span>
+                                <span class="blog-read-time">2 hour 40 min read</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="blog-card" data-animate="right" data-delay="0.4">
+                        <div class="blog-image">
+                            <div class="blog-glow"></div>
+                            <div class="blog-category">Design</div>
+                        </div>
+                        <div class="blog-content">
+                            <h3>The Art of Minimalism in Modern UI</h3>
+                            <p>Why less is often more when it comes to creating intuitive user experiences.</p>
+                            <div class="blog-meta">
+                                <span class="blog-date">March 5, 2026</span>
+                                <span class="blog-read-time">1 hour 37 min read</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="blog-actions">
+                    <button class="btn btn-outline">
+                        <span>View All Posts</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Let's Connect</h2>
+                    <p class="section-subtitle">Ready to build something amazing together?</p>
+                </div>
+                
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Get In Touch</h3>
+                        <p>I'm always excited to hear about new projects and opportunities. Whether you have a specific idea in mind or just want to explore possibilities, let's start a conversation.</p>
+                        
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="method-info">
+                                    <h4>Email</h4>
+                                    <a href="mailto:rotam167@exdonuts.com">rotam167@exdonuts.com</a>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="method-info">
+                                    <h4>Phone</h4>
+                                    <a href="tel:+1234567890">+1 (234) 567-890</a>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="method-info">
+                                    <h4>Location</h4>
+                                    <span>India, Haryana</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Dribbble">
+                                <i class="fab fa-dribbble"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo-glow">Aʟᴘʜᴀ ꭙ Gᴀᴍᴇʀ</div>
+                    <p>Crafting digital experiences that matter</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                        <a href="#hero">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Connect</h4>
+                        <a href="#">LinkedIn</a>
+                        <a href="#">GitHub</a>
+                        <a href="#">Twitter</a>
+                        <a href="#">Dribbble</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Aʟᴘʜᴀ ꭙ Gᴀᴍᴇʀ. All rights reserved.</p>
+                <p>Fueled by ideas, powered by code 💻⚡</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div class="modal-overlay" id="projectModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body" id="modalBody">
+                <!-- Project details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+ <script src="js/animations.js"></script>
+<script src="js/interactions.js"></script>
+<script src="js/dashboard.js"></script>
+ <script src="js/main.js"></script>
+</body>
+</html>
