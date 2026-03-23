@@ -1,0 +1,551 @@
+/* ==========================================
+   MODERN PERSONAL WEBSITE - ANIMATIONS
+   ========================================== */
+
+/* ==========================================
+   PAGE TRANSITIONS
+   ========================================== */
+
+.fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.fade-out {
+  animation: fadeOut 0.8s ease-out forwards;
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.slide-in-right {
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+.slide-up {
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================
+   TEXT ANIMATIONS
+   ========================================== */
+
+.text-reveal {
+  overflow: hidden;
+}
+
+.text-reveal > * {
+  transform: translateY(100%);
+  animation: textReveal 0.8s ease-out forwards;
+}
+
+@keyframes textReveal {
+  to {
+    transform: translateY(0);
+  }
+}
+
+.text-glow {
+  animation: textGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes textGlow {
+  from {
+    text-shadow: 0 0 10px var(--glow-color);
+  }
+  to {
+    text-shadow: 0 0 20px var(--glow-color), 0 0 30px var(--glow-color);
+  }
+}
+
+.typewriter {
+  overflow: hidden;
+  border-right: 3px solid var(--accent-primary);
+  white-space: nowrap;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--accent-primary);
+  }
+}
+
+/* ==========================================
+   CARD HOVER EFFECTS
+   ========================================== */
+
+.card-float {
+  transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+}
+
+.card-float:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px var(--shadow-primary);
+}
+
+.card-glow {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-glow::before {
+  content: '';
+  position: absolute;
+  top: var(--y, 50%);
+  left: var(--x, 50%);
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, var(--glow-color) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity var(--transition-medium);
+  pointer-events: none;
+}
+
+.card-glow:hover::before {
+  opacity: 0.3;
+}
+
+/* ==========================================
+   BUTTON ANIMATIONS
+   ========================================== */
+
+.btn-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shine::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.btn-shine:hover::before {
+  left: 100%;
+}
+
+.btn-pulse {
+  animation: pulse 2s infinite;
+}
+
+.btn-ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-ripple .ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(0);
+  animation: ripple 0.6s linear;
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* ==========================================
+   ICON ANIMATIONS
+   ========================================== */
+
+.icon-spin {
+  animation: spin 2s linear infinite;
+}
+
+.icon-bounce {
+  animation: bounce 2s infinite;
+}
+
+.icon-pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* ==========================================
+   PROGRESS BAR ANIMATIONS
+   ========================================== */
+
+.progress-animate {
+  animation: progressFill 1s ease-out forwards;
+}
+
+@keyframes progressFill {
+  from {
+    width: 0%;
+  }
+}
+
+/* ==========================================
+   PARTICLE EFFECTS
+   ========================================== */
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: particleFloat 3s ease-out forwards;
+}
+
+@keyframes particleFloat {
+  0% {
+    opacity: 1;
+    transform: scale(1) translate(0, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0) translate(var(--dx), var(--dy));
+  }
+}
+
+/* ==========================================
+   LOADING ANIMATIONS
+   ========================================== */
+
+.loading-dots {
+  display: flex;
+  gap: 4px;
+}
+
+.loading-dots .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-primary);
+  animation: loadingDot 1.4s infinite ease-in-out both;
+}
+
+.loading-dots .dot:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.loading-dots .dot:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+@keyframes loadingDot {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+
+/* ==========================================
+   SCROLL ANIMATIONS
+   ========================================== */
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-scale {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.8s ease-out;
+}
+
+.scroll-scale.scaled {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.scroll-rotate {
+  opacity: 0;
+  transform: rotate(-10deg) translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.scroll-rotate.rotated {
+  opacity: 1;
+  transform: rotate(0) translateY(0);
+}
+
+/* ==========================================
+   GLASS MORPHISM ANIMATIONS
+   ========================================== */
+
+.glass-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-shimmer::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 70%
+  );
+  transform: rotate(45deg);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+  }
+}
+
+/* ==========================================
+   NAVIGATION ANIMATIONS
+   ========================================== */
+
+.nav-item {
+  position: relative;
+  transition: color var(--transition-medium);
+}
+
+.nav-item::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--accent-primary);
+  transform: translateX(-50%);
+  transition: width var(--transition-medium);
+}
+
+.nav-item:hover::after,
+.nav-item.active::after {
+  width: 100%;
+}
+
+/* ==========================================
+   THEME TRANSITION
+   ========================================== */
+
+.theme-transition {
+  transition: background-color var(--transition-slow), 
+              color var(--transition-slow),
+              border-color var(--transition-slow),
+              box-shadow var(--transition-slow);
+}
+
+/* ==========================================
+   CUSTOM CURSOR
+   ========================================== */
+
+.custom-cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--accent-primary);
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  transition: transform 0.1s ease;
+}
+
+.custom-cursor-follower {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--accent-primary);
+  pointer-events: none;
+  z-index: 9998;
+  mix-blend-mode: difference;
+  transition: transform 0.2s ease;
+}
+
+/* ==========================================
+   RESPONSIVE ANIMATIONS
+   ========================================== */
+
+@media (max-width: 768px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .about-content,
+  .contact-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .blog-card.featured {
+    grid-template-columns: 1fr;
+  }
+  
+  .dashboard-grid,
+  .projects-grid,
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background: var(--bg-glass);
+    backdrop-filter: blur(20px);
+    border-left: 1px solid var(--border-primary);
+    flex-direction: column;
+    padding: var(--spacing-xxl) var(--spacing-lg);
+    transition: right var(--transition-medium);
+  }
+  
+  .nav-menu.active {
+    right: 0;
+  }
+  
+  .nav-toggle {
+    display: flex;
+  }
+  
+  .hero-actions {
+    justify-content: center;
+  }
+}
+
+/* Base animation state */
+[data-animate] {
+    opacity: 0;
+    transform: translateY(30px) scale(0.98);
+    transition:
+        opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+}
+
+/* When animation activates */
+[data-animate].animate-in {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* Direction-based animations */
+
+[data-animate="left"] {
+    transform: translateX(-40px);
+}
+
+[data-animate="right"] {
+    transform: translateX(40px);
+}
+
+[data-animate="up"] {
+    transform: translateY(40px);
+}
+
+/* Final state (shared) */
+[data-animate].animate-in {
+    transform: translate(0, 0) scale(1);
+}
